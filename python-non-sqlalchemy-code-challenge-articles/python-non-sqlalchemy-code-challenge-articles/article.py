@@ -1,8 +1,11 @@
 class Article:
+    all_articles = []
+
     def __init__(self, author, magazine, title):
         self._author = author
         self._magazine = magazine
         self._title = title
+        Article.all_articles.append(self)
 
     @property
     def title(self):
